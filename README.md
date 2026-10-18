@@ -1,5 +1,7 @@
 # Weather App (Flask + Open-Meteo + MySQL)
 
+![Weather app screenshot](weather.png)
+
 Type a city, see the current weather and a 5-day forecast. Every search is saved in MySQL.
 
 ## Run it (one step at a time)

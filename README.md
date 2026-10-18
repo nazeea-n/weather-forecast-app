@@ -1,23 +1,35 @@
-# Weather App (Flask + Open-Meteo + MySQL)
+# Weather App
+
+
 
 ![Weather app screenshot](weather.png)
 
-Type a city, see the current weather and a 5-day forecast. Every search is saved in MySQL.
 
-## Run it (one step at a time)
-1. Open this folder in VS Code (File > Open Folder > weather-app).
-2. Terminal > New Terminal.
-3. `python -m venv venv`
-4. `venv\Scripts\activate`  (you should see (venv) in the prompt)
-5. `pip install -r requirements.txt`
-6. Open `config.py` and change `your_mysql_password` to your MySQL root password.
-   (No MySQL yet? Skip this. The app still works, it just won't save history.)
-7. `python app.py`
-8. Open http://127.0.0.1:5000 in your browser.
 
-## Files
-- app.py: the Flask server and the two API routes
-- weather_service.py: gets the data from Open-Meteo
-- db.py: saves and reads search history in MySQL
-- templates/index.html: the web page
-- config.py: MySQL settings
+A Flask web app that shows the current weather and a 5-day forecast for any place. Every search is saved in MySQL and shown as recent searches.
+
+## Features
+- Search any town, city or village
+- Current temperature, feels-like, humidity and wind
+- 5-day forecast
+- Recent searches saved in MySQL (optional: without MySQL the weather still works)
+- Page colors change with the weather
+
+## Tech stack
+Python, Flask, MySQL (PyMySQL), Open-Meteo API (no API key needed), HTML, CSS, JavaScript
+
+## How to run
+1. Clone this repository and open the folder.
+2. `python -m venv venv`
+3. `venv\Scripts\activate`
+4. `pip install -r requirements.txt`
+5. Copy `config.example.py`, rename the copy to `config.py`, and put your MySQL password in it.
+6. `python app.py`
+7. Open http://127.0.0.1:5000
+
+## Project structure
+- `app.py`: Flask server and API routes
+- `weather_service.py`: fetches data from Open-Meteo
+- `db.py`: saves and reads search history in MySQL
+- `templates/index.html`: the web page
+- `config.example.py`: MySQL settings template
